@@ -50,7 +50,7 @@ nav ul {
 
 
 li:hover {
-    background-color: #001;
+    background-color: #008;
 }
 
 nav.black ul {
@@ -64,7 +64,7 @@ nav ul li {
 
 nav ul li {
     text-decoration: none;
-    color: #008;
+    color: #fff;
     font-size: 20px;
 }
 
@@ -79,6 +79,45 @@ nav ul li {
     color: #fff;
     display: none;
 }
+
+footer {
+    margin-bottom: 0;
+    width: 100%;
+    background: #000;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.foot-icon {
+    display: block;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul a {
+    text-decoration: none;
+}
+
+.btn {
+    background: #001;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.foot-icon .btn:hover {
+    background: #008;
+}
+
+.foot-icon-hide {
+    display: none;
+}
+
 
 @media(max-width: 600px) {
     .logo {
@@ -110,5 +149,22 @@ nav ul li {
 
     .menu-icon {
         display: block;
+    }
+
+    .foot-icon {
+        display: none;
+    }
+
+    .foot-icon-hide {
+        display: block;
+    }
+
+    footer .social {
+        transform: scale(0.8);
+        transition-duration: 0.5s;
+    }
+
+    .social:hover {
+        transform: scale(1.1);
     }
 }
