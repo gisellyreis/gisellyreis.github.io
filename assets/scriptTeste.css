@@ -89,6 +89,20 @@ footer ul a {
 
 
 @media(max-width: 600px) {
+
+    .skill {
+        width: 180px;
+        height: 200px;
+        color: #cac9f9;
+        background: #297094;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 10px;
+    }
+
     .logo {
         position: fixed;
         top: 0;
