@@ -53,7 +53,8 @@ header {
     background-size: cover;
 }
 
-header, .content {
+header {
+    width: 100vw;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -61,19 +62,23 @@ header, .content {
 }
 
 #about, #works, footer {
-    width: 100vw;
+    width: 100%;
     min-height: 420px;
     padding: 20px;
     display: grid;
+    padding: 20px;
+    text-align: center;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .skills {
-    width: 90%;
+    width: 100%;
+    /*
+    */
     display: grid;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 20px;
 }
 
