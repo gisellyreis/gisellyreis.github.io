@@ -166,7 +166,7 @@ button {
 @media(max-width: 600px) {
 
     .skill, .photo {
-        width: 180px;
-        height: 200px;
+        width: 100px;
+        height: 120px;
     }
 }
