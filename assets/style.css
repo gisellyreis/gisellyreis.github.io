@@ -11,6 +11,11 @@ azul-verde: #43f5e8 #2f92aa #297094 */
     box-sizing: border-box; 
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 nav {
     position: fixed;
     width: 100%;
@@ -56,7 +61,7 @@ header, .content {
 }
 
 #about, #works, footer {
-    width: 100%;
+    width: 100vw;
     height: 90%;
     min-height: 500px;
     padding: 20px;
@@ -66,7 +71,7 @@ header, .content {
 }
 
 .skills {
-    width: 100%;
+    width: 90%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -88,7 +93,7 @@ header, .content {
 }
 
 .about-me {
-    width: 800px;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
@@ -112,8 +117,10 @@ header, .content {
 }
 
 .skill {
-    width: 140px;
-    height: 160px;
+    width: 80px;
+    height: 100px;
+    max-width: 130px;
+    max-height: 160px;
     color: #cac9f9;
     background: #297094;
     
