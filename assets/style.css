@@ -62,8 +62,7 @@ header, .content {
 
 #about, #works, footer {
     width: 100vw;
-    height: 90%;
-    min-height: 500px;
+    min-height: 420px;
     padding: 20px;
     display: grid;
     justify-content: center;
@@ -119,8 +118,8 @@ header, .content {
 .skill {
     width: 80px;
     height: 100px;
-    max-width: 130px;
-    max-height: 160px;
+    min-width: 80px;
+    min-height: 100px;
     color: #cac9f9;
     background: #297094;
     
