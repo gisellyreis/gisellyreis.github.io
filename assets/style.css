@@ -1,34 +1,14 @@
-html, body {
+
+/* Cores: 
+azui escuro: #1b105f #0f054c #23196f 
+roxo: #352786 #4b3e96 #cac9f9 
+azul-verde: #43f5e8 #2f92aa #297094 */
+
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-}
-
-header {
-    width: 100%;
-    height: 100vh;
-    background: url("./img/back.jpg") no-repeat 50% 50%;
-    background-size: cover;
-}
-
-.content {
-    width: 90%;
-    margin: 4em auto;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
-}
-
-.logo {
-    line-height: 60px;
-    position: fixed;
-    float: left;
-    margin: 16px 40px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 2px;
-    display: none;
+    outline: 0;
+    box-sizing: border-box; 
 }
 
 nav {
@@ -37,134 +17,136 @@ nav {
     line-height: 40px;
 }
 
+nav .menu {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    margin-left: 40px;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    background: rgba(0, 0, 0, 0);
     overflow: hidden;
-    color: #fff;
-    text-align: center;
+    display: flex;
     transition: 1s;
+    margin-right: 20px;
 }
 
-
-li:hover {
-    background-color: #008;
+nav ul a {
+    color: #cac9f9;
+    padding: 10px;
+    text-decoration: none;
 }
 
-nav.black ul {
-    background: #000;
+header {
+    width: 100vw;
+    height: 100%;
+    min-height: 420px;
+    background: url("./img/banner-2.jpg") no-repeat 50% 50%;
+    background-size: cover;
 }
 
-nav ul li {
-    display: inline-block;
+header, .content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #cac9f9;
+}
+
+#about, #works, footer {
+    width: 100vw;
+    height: 90%;
+    min-height: 500px;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    background: #160d53;
+}
+
+#works {
+    background: #1a115e;
+}
+
+#about h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me {
+    width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.about-me img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+#works, .skills {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-nav ul li {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
+#works h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu-icon {
-    line-height: 60px;
-    width: 100%;
-    background: #000;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 15px 24px;
+.skills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    width: 140px;
+    height: 160px;
+    color: #cac9f9;
+    background: #297094;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    color: #fff;
-    display: none;
+}
+
+.first, .photo {
+    background: #352786;
+}
+
+.photo {
+    width: 140px;
+    height: 160px;
+    margin: 10px;
+}
+
+.text {
+    margin: 20px;
 }
 
 footer {
-    margin-bottom: 0;
     width: 100%;
-    background: #000;
-    padding: 2px;
+   /* position: absolute;
+    bottom: 0;
+    */
+    margin-bottom: 0;
+    padding: 20px;
     text-align: center;
+    background: #160d53;
 }
 
-.foot-icon {
-    display: block;
-}
-
-footer ul {
-    list-style: none;
-}
-
-footer ul a {
-    text-decoration: none;
-}
-
-.btn {
-    background: #001;
-    border: none;
-    box-sizing: border-box;
-    color: #fff;
-    padding: 12px 16px;
-    font-size: 16px;
+button {
     cursor: pointer;
-}
-
-.foot-icon .btn:hover {
-    background: #008;
-}
-
-.foot-icon-hide {
-    display: none;
-}
-
-
-@media(max-width: 600px) {
-    .logo {
-        position: fixed;
-        top: 0;
-        margin-top: 16px;
-        display: none;
-    }
-
-    nav ul {
-        max-height: 0px;
-        background: #000;
-    }
-
-    nav.black ul {
-        background: #000;
-    }
-
-    .showing {
-        max-height: 34em;
-    }
-
-    nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .foot-icon {
-        display: none;
-    }
-
-    .foot-icon-hide {
-        display: block;
-    }
-
-    footer .social {
-        transform: scale(0.8);
-        transition-duration: 0.5s;
-    }
-
-    .social:hover {
-        transform: scale(1.1);
-    }
 }
