@@ -162,6 +162,10 @@ button {
     cursor: pointer;
 }
 
+.skills a {
+    text-decoration: none;
+}
+
 @media(max-width: 640px) {
 
     .skill, .photo {
