@@ -1,130 +1,224 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* General styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #ffffff;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: #ffffff;
   line-height: 1.6;
 }
 
+/* Header styles */
 header {
   background: url('path-to-your-header-image.jpg') no-repeat center center/cover;
   color: #ffffff;
-  height: 100vh;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
 }
 
-header::before {
-  content: '';
+header::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.6); /* Adding a dark overlay */
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
 
 header h1 {
-  font-size: 3rem;
   margin: 0;
-  z-index: 2;
+  font-size: 2.5em;
+  position: relative;
+  z-index: 1;
 }
 
 header p {
-  font-size: 1.5rem;
-  z-index: 2;
+  margin: 10px 0 20px;
+  font-size: 1.2em;
+  position: relative;
+  z-index: 1;
 }
 
-header nav ul {
-  display: flex;
+nav ul {
   list-style: none;
   padding: 0;
-  z-index: 2;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
-header nav ul li {
-  margin: 0 1rem;
+nav ul li {
+  margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1em;
+  transition: color 0.3s;
 }
 
-header .social-links {
-  margin-top: 1rem;
-  z-index: 2;
+nav ul li a:hover {
+  color: #00aaff;
 }
 
-header .social-links a {
+.social-links {
+  margin-top: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.social-links a {
   color: #ffffff;
+  margin: 0 10px;
   text-decoration: none;
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
+.social-links a:hover {
+  color: #00aaff;
+}
+
+/* Main content styles */
 main {
-  padding: 2rem;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
 section {
-  margin-bottom: 4rem;
+  margin-top: 50%;
+  min-height: 100vh; /* Ensure each section is full viewport height */
+  //display: flex;
+  //flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
   text-align: center;
+  border-bottom: 2px solid #00aaff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* About Me Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-section p, section ul, section .project, section .experience, section .education, section .blog-post {
-  margin: 0 auto 2rem auto;
-  max-width: 800px;
-  padding: 1rem;
+.about-content img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
   background-color: #1e1e1e;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-section ul {
-  list-style: none;
-  padding: 0;
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-section ul li {
-  margin-bottom: 0.5rem;
+.project h3 {
+  margin-top: 10px;
 }
 
+.project p {
+  margin: 5px 0;
+}
+
+/* Work Experience, Education, and Skills sections */
+.experience, .education, .skills ul {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.experience h3, .education h3 {
+  margin-top: 0;
+}
+
+.experience p, .education p {
+  margin: 5px 0;
+}
+
+/* Contact Section */
+#contact p {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background-color: #1e1e1e;
+  padding: 20px 0;
+  background-color: #333333;
 }
 
-form label, form input, form textarea, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  background-color: #2e2e2e;
-  border: 1px solid #444;
-  border-radius: 4px;
-  color: #ffffff;
+footer p {
+  margin: 0;
 }
 
-form button {
-  background-color: #3e3e3e;
-  border: none;
-  cursor: pointer;
+/* Back to Top Button Styles */
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #00aaff; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
 }
 
-form button:hover {
-  background-color: #555;
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }

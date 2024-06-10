@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giselly Alves Reis - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +31,33 @@
         </div>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="about">
             <h2>About Me</h2>
-            <p>
-                I have a Bachelor's degree in Computer Science and am currently pursuing a Master's degree in Computer Science, both at UFBA. I'm passionate about studying and teaching. This semester, I'm taking courses in Machine Learning to keep myself up to date (my process can be followed on my <a href="https://github.com/GisellyReis" target="_blank">GitHub repository</a>). Additionally, I'm volunteering in the Introduction to Python Programming training course at the Tomorrow UFBA project.
-            </p>
+            <div class="about-content">
+                <img src="path-to-your-photo.jpg" alt="Giselly Alves Reis">
+                <p>
+                    I have a Bachelor's degree in Computer Science and am currently pursuing a Master's degree in Computer Science, both at UFBA. I'm passionate about studying and teaching. This semester, I'm taking courses in Machine Learning to keep myself up to date (my process can be followed on my <a href="https://github.com/GisellyReis" target="_blank">GitHub repository</a>). Additionally, I'm volunteering in the Introduction to Python Programming training course at the Tomorrow UFBA project.
+                </p>
+            </div>
         </section>
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Details coming soon.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Details coming soon.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Details coming soon.</p>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="path-to-project1-image.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Details coming soon.</p>
+                </div>
+                <div class="project">
+                    <img src="path-to-project2-image.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Details coming soon.</p>
+                </div>
+                <div class="project">
+                    <img src="path-to-project3-image.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Details coming soon.</p>
+                </div>
             </div>
         </section>
         <section id="experience">
@@ -108,6 +121,7 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
+            <p>Email: <a href="mailto:giselly.alves@example.com">giselly.alves@example.com</a></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
                 <a href="https://github.com/GisellyReis" target="_blank">GitHub</a>
@@ -117,6 +131,31 @@
     <footer>
         <p>&copy; 2024 Giselly Alves Reis. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <button id="topBtn" title="Go to top" class="back-to-top"><i class="lni-chevron-up">Top</i></button>
+    <script>
+        // Get the button
+        var topBtn = document.getElementById("topBtn");
+    
+        // Get the header
+        var header = document.querySelector("header");
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        topBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+    
 </body>
 </html>
