@@ -191,12 +191,20 @@ section h2 {
   gap: 20px;
 }
 
+/* Remove default link styles for project links */
+.project-link {
+  text-decoration: none;
+  color: inherit; /* Inherit the color of the text */
+  display: block; /* Make the link block level */
+}
+
 .project, .experience, .education {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s; /* Add a transition for a hover effect */
 }
 
 .project h3, .experience h3, .education h3 {
@@ -205,6 +213,10 @@ section h2 {
 
 .project p, .experience p, .education p {
   margin: 5px 0;
+}
+
+.project-link:hover .project {
+  transform: scale(1.05); /* Scale up the project div on hover */
 }
 
 /* Contact Section */
