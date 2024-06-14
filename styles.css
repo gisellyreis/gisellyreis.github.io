@@ -19,7 +19,7 @@ header {
   text-align: center;
   padding: 60px 20px;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,6 +49,17 @@ header p {
   z-index: 1;
 }
 
+/* Navbar styles */
+nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -56,7 +67,6 @@ nav ul {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 1;
 }
 
 nav ul li {
@@ -91,6 +101,50 @@ nav ul li a:hover {
   color: #00aaff;
 }
 
+/* Fixed nav styles */
+.fixed-nav #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+body.fixed-nav main {
+  padding-top: 60px; /* Adjust based on your header height */
+}
+
+/* Back to top button styles */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00aaff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #0088cc;
+}
+
+.material-icons {
+  font-size: 24px;
+}
+
 /* Main content styles */
 main {
   padding: 20px;
@@ -102,13 +156,11 @@ main {
 section {
   margin-top: 50%;
   min-height: 100vh; /* Ensure each section is full viewport height */
-  //display: flex;
-  //flex-direction: column;
   align-content: center;
   justify-content: center;
 }
 
-h2 {
+section h2 {
   font-size: 2em;
   margin-bottom: 10px;
   text-align: center;
@@ -139,29 +191,7 @@ h2 {
   gap: 20px;
 }
 
-.project {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.project h3 {
-  margin-top: 10px;
-}
-
-.project p {
-  margin: 5px 0;
-}
-
-/* Work Experience, Education, and Skills sections */
-.experience, .education, .skills ul {
+.project, .experience, .education {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 5px;
@@ -169,11 +199,11 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.experience h3, .education h3 {
+.project h3, .experience h3, .education h3 {
   margin-top: 0;
 }
 
-.experience p, .education p {
+.project p, .experience p, .education p {
   margin: 5px 0;
 }
 
@@ -200,25 +230,4 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-/* Back to Top Button Styles */
-#topBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #00aaff; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-}
-
-#topBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
 }

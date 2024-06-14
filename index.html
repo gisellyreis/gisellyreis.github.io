@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giselly Alves Reis - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         html {
             scroll-behavior: smooth;
@@ -15,7 +16,7 @@
     <header>
         <h1>Giselly Alves Reis</h1>
         <p>Researcher in Machine Learning and IoT | Master's Degree Student in Computer Science</p>
-        <nav>
+        <nav id="navbar">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,6 +31,8 @@
             <a href="https://github.com/GisellyReis" target="_blank">GitHub</a>
         </div>
     </header>
+    <a href="#" id="topBtn" title="Go to top" class="back-to-top" style="display: none;"><i class="material-icons">^</i></a>
+    
     <main>
         <section id="about" class="about">
             <h2>About Me</h2>
@@ -131,7 +134,6 @@
     <footer>
         <p>&copy; 2024 Giselly Alves Reis. All rights reserved.</p>
     </footer>
-    <button id="topBtn" title="Go to top" class="back-to-top"><i class="lni-chevron-up">Top</i></button>
     <script>
         // Get the button
         var topBtn = document.getElementById("topBtn");
@@ -143,9 +145,14 @@
         window.onscroll = function() {scrollFunction()};
     
         function scrollFunction() {
-            if (document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight) {
+            var navbar = document.getElementById("navbar");
+            var topBtn = document.getElementById("topBtn");
+            
+            if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+                document.body.classList.add("fixed-nav");
                 topBtn.style.display = "block";
             } else {
+                document.body.classList.remove("fixed-nav");
                 topBtn.style.display = "none";
             }
         }
